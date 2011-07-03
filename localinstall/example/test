@@ -1,0 +1,4 @@
+cd project1
+gradle
+cd ../project2
+gradle

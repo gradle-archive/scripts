@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply from: 'https://raw.github.com/matthewmccullough/gradle-applyfrom-scripts/master/localinstall/localinstall.gradle'
+
+group = 'samples'
+version = '1.0.0'
+
+dependencies { 
+  compile 'samples:project1:1.0.0' 
+}
+
+defaultTasks 'publishLocalArchives'
