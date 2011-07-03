@@ -1,10 +1,10 @@
 # Gradle ApplyFrom Scripts
-These scripts are hosted on [GitHub](https://github.com/matthewmccullough/gradle-applyfrom-scripts) for the purposes of allowing direct `applyFrom` use from the web, or cloning of this repository to your local disk as a collection of useful Gradle add-ons.
+These scripts are hosted on [GitHub](https://github.com/matthewmccullough/gradle-applyfrom-scripts) for the purposes of allowing direct `apply from` use from the web, or cloning of this repository to your local disk as a collection of useful Gradle add-ons.
 
 ## Use
 In your Gradle build file, simply path to one of the scripts in its raw form as follows:
 
-    apply from: 'http://github.com/breskeby/gradleplugins/raw/master/emmaPlugin/emma.gradle'
+    apply from: 'https://raw.github.com/matthewmccullough/gradle-applyfrom-scripts/master/printclasspath/printclasspath.gradle'
 
 
 ## Acknowledgements
