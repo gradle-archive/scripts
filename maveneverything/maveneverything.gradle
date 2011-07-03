@@ -1,0 +1,18 @@
+apply plugin: 'maven'
+apply plugin: 'maven-metadata'
+
+//Repo to retrieve the maven-metadata plugin
+buildscript {
+  repositories {
+    mavenRepo urls: ["http://repo.jfrog.org/artifactory/plugins-snapshots"]
+  }
+
+  dependencies {
+    classpath "org.gradle.plugins:gradle-m2metadata-plugin:1.0-SNAPSHOT"
+  }
+}
+
+//Repo to download Maven artifacts
+repositories { 
+  mavenCentral()
+}
