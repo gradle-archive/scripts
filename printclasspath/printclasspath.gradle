@@ -1,0 +1,5 @@
+task printCompleteCompileJavaClasspath << {
+    println "**************************** BEGIN compileJava CLASSPATH ************************************"
+    compileJava.classpath.files.each { println it }
+   println "**************************** END compileJava CLASSPATH ************************************"
+}
