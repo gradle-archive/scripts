@@ -1,5 +1,11 @@
 task printCompleteCompileJavaClasspath << {
-    println "**************************** BEGIN compileJava CLASSPATH ************************************"
+    println "********************** BEGIN compileJava CLASSPATH ******************************"
     compileJava.classpath.files.each { println it }
-   println "**************************** END compileJava CLASSPATH ************************************"
+    println "*********************** END compileJava CLASSPATH *******************************"
+}
+
+task printAllConfigurations << {
+    println "************************ BEGIN allConfigurations ********************************"
+    println configurations
+    println "************************* END allConfigurations *********************************"
 }
