@@ -2,10 +2,14 @@ repositories {
     ivy {
         name = 'local'
         artifactPattern "${gradle.gradleUserHomeDir}/local-repo/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"
+        ivyPattern "${gradle.gradleUserHomeDir}/local-repo/" + org.gradle.api.artifacts.repositories.IvyArtifactRepository.GRADLE_IVY_PATTERN
     }
 }
 
 task publishLocalArchives(type: Upload) {
     repositories.add(project.repositories.local)
     configuration = configurations.archives
+    descriptorDestination = new File("${gradle.gradleUserHomeDir}/local-repo/" + org.gradle.api.artifacts.repositories.IvyArtifactRepository.GRADLE_IVY_PATTERN)
+    uploadDescriptor = true
 }
+
